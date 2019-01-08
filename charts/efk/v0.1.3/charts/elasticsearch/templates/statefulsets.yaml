@@ -64,7 +64,7 @@ spec:
       - name: elasticsearch
         env:
         - name: http.cors.enabled
-          value: true
+          value: "true"
         - name: http.cors.allow-origin=*
           value: "*"
         - name: cluster.name
