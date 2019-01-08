@@ -63,6 +63,10 @@ spec:
       containers:
       - name: elasticsearch
         env:
+        - name: http.cors.enabled
+          value: true
+        - name: http.cors.allow-origin=*
+          value: "*"
         - name: cluster.name
           value: {{ .Release.Name }}-cluster
         - name: discovery.zen.ping.unicast.hosts
